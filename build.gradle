@@ -9,9 +9,7 @@ buildscript {
         springBootVersion = '2.2.4.RELEASE'
     }
     repositories {
-        maven {
-            url 'https://artifactory.global.dish.com/artifactory/repo'
-        }
+        mavenCentral() 
     }
     dependencies {
         classpath "org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion"
@@ -37,9 +35,7 @@ configurations {
 }
 */
 repositories {
-    maven {
-        url 'https://artifactory.global.dish.com/artifactory/repo'
-    }
+   mavenCentral() 
 }
 
 ext {
