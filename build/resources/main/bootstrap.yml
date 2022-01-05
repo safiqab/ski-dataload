@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    config:
+      enabled: false
+cloud:
+  aws:
+    region:
+      static: us-west-2
+
+
+aws:
+  paramstore:
+    enabled: true
+    name: skidataload
+    prefix: /config
+    profile-separator: _
+    default-context: skidataload

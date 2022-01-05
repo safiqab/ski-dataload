@@ -1,0 +1,638 @@
+{
+  "groups": [
+    {
+      "name": "restapi.endpoint",
+      "type": "com.dish.scm.ski.skidataload.config.ApiEndPointConfig",
+      "sourceType": "com.dish.scm.ski.skidataload.config.ApiEndPointConfig"
+    },
+    {
+      "name": "restapi.endpoint.skimodel",
+      "type": "com.dish.scm.ski.skidataload.config.ApiEndPointConfig$Skimodel",
+      "sourceType": "com.dish.scm.ski.skidataload.config.ApiEndPointConfig",
+      "sourceMethod": "getSkimodel()"
+    },
+    {
+      "name": "restapi.endpoint.skireference",
+      "type": "com.dish.scm.ski.skidataload.config.ApiEndPointConfig$Skireference",
+      "sourceType": "com.dish.scm.ski.skidataload.config.ApiEndPointConfig",
+      "sourceMethod": "getSkireference()"
+    },
+    {
+      "name": "restapi.endpoint.skisku",
+      "type": "com.dish.scm.ski.skidataload.config.ApiEndPointConfig$Skisku",
+      "sourceType": "com.dish.scm.ski.skidataload.config.ApiEndPointConfig",
+      "sourceMethod": "getSkisku()"
+    },
+    {
+      "name": "ski-reference.collection-name",
+      "type": "com.dish.scm.ski.skidataload.config.SkiReferenceNameConfig",
+      "sourceType": "com.dish.scm.ski.skidataload.config.SkiReferenceNameConfig"
+    },
+    {
+      "name": "ski.file",
+      "type": "com.dish.scm.ski.skidataload.config.S3Config",
+      "sourceType": "com.dish.scm.ski.skidataload.config.S3Config"
+    },
+    {
+      "name": "ski.file.linux-location",
+      "type": "com.dish.scm.ski.skidataload.config.S3Config$Linux_location",
+      "sourceType": "com.dish.scm.ski.skidataload.config.S3Config",
+      "sourceMethod": "getLinux_location()"
+    },
+    {
+      "name": "ski.file.s3",
+      "type": "com.dish.scm.ski.skidataload.config.S3Config$S3",
+      "sourceType": "com.dish.scm.ski.skidataload.config.S3Config",
+      "sourceMethod": "getS3()"
+    },
+    {
+      "name": "ski.file.win-location",
+      "type": "com.dish.scm.ski.skidataload.config.S3Config$Win_location",
+      "sourceType": "com.dish.scm.ski.skidataload.config.S3Config",
+      "sourceMethod": "getWin_location()"
+    },
+    {
+      "name": "worksheet.tabname",
+      "type": "com.dish.scm.ski.skidataload.config.FileTabNameConfig",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "restapi.endpoint.skimodel.get-model-url",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.ApiEndPointConfig$Skimodel"
+    },
+    {
+      "name": "restapi.endpoint.skimodel.patch-model-url",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.ApiEndPointConfig$Skimodel"
+    },
+    {
+      "name": "restapi.endpoint.skimodel.post-model-url",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.ApiEndPointConfig$Skimodel"
+    },
+    {
+      "name": "restapi.endpoint.skireference.get-reference-url",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.ApiEndPointConfig$Skireference"
+    },
+    {
+      "name": "restapi.endpoint.skireference.patch-reference-url",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.ApiEndPointConfig$Skireference"
+    },
+    {
+      "name": "restapi.endpoint.skireference.post-reference-url",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.ApiEndPointConfig$Skireference"
+    },
+    {
+      "name": "restapi.endpoint.skisku.get-sku-url",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.ApiEndPointConfig$Skisku"
+    },
+    {
+      "name": "restapi.endpoint.skisku.patch-sku-url",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.ApiEndPointConfig$Skisku"
+    },
+    {
+      "name": "restapi.endpoint.skisku.post-sku-url",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.ApiEndPointConfig$Skisku"
+    },
+    {
+      "name": "ski-reference.collection-name.b-r-a-n-d-c-o-d-e-r-e-f",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.SkiReferenceNameConfig"
+    },
+    {
+      "name": "ski-reference.collection-name.c-h-a-n-n-e-l-r-e-f",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.SkiReferenceNameConfig"
+    },
+    {
+      "name": "ski-reference.collection-name.c-o-l-o-r-h-e-x-r-e-f",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.SkiReferenceNameConfig"
+    },
+    {
+      "name": "ski-reference.collection-name.c-o-l-o-r-r-e-f",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.SkiReferenceNameConfig"
+    },
+    {
+      "name": "ski-reference.collection-name.c-o-m-p-o-n-e-n-t-t-y-p-e-r-e-f",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.SkiReferenceNameConfig"
+    },
+    {
+      "name": "ski-reference.collection-name.c-o-n-f-i-g-t-y-p-e-r-e-f",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.SkiReferenceNameConfig"
+    },
+    {
+      "name": "ski-reference.collection-name.c-o-u-n-t-r-y-o-f-o-r-i-g-i-n-r-e-f",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.SkiReferenceNameConfig"
+    },
+    {
+      "name": "ski-reference.collection-name.d-e-p-t-i-d-r-e-f",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.SkiReferenceNameConfig"
+    },
+    {
+      "name": "ski-reference.collection-name.d-i-s-p-o-s-i-t-i-o-n-c-o-d-e-r-e-f",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.SkiReferenceNameConfig"
+    },
+    {
+      "name": "ski-reference.collection-name.e-q-u-i-p-i-d-r-e-f",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.SkiReferenceNameConfig"
+    },
+    {
+      "name": "ski-reference.collection-name.e-q-u-i-p-s-u-b-c-a-t-r-e-f",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.SkiReferenceNameConfig"
+    },
+    {
+      "name": "ski-reference.collection-name.e-q-u-i-p-s-u-b-t-y-p-e-r-e-f",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.SkiReferenceNameConfig"
+    },
+    {
+      "name": "ski-reference.collection-name.e-q-u-i-p-t-y-p-e-r-e-f",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.SkiReferenceNameConfig"
+    },
+    {
+      "name": "ski-reference.collection-name.f-e-a-t-u-r-e-t-y-p-e-r-e-f",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.SkiReferenceNameConfig"
+    },
+    {
+      "name": "ski-reference.collection-name.l-a-n-g-c-o-d-e-r-e-f",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.SkiReferenceNameConfig"
+    },
+    {
+      "name": "ski-reference.collection-name.l-o-c-a-t-i-o-n-r-e-f",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.SkiReferenceNameConfig"
+    },
+    {
+      "name": "ski-reference.collection-name.m-a-n-u-f-a-c-t-u-r-e-r-r-e-f",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.SkiReferenceNameConfig"
+    },
+    {
+      "name": "ski-reference.collection-name.n-e-t-w-o-r-k-c-o-d-e",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.SkiReferenceNameConfig"
+    },
+    {
+      "name": "ski-reference.collection-name.o-s-t-y-p-e",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.SkiReferenceNameConfig"
+    },
+    {
+      "name": "ski-reference.collection-name.o-w-n-e-r-s-h-i-p-c-o-d-e-r-e-f",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.SkiReferenceNameConfig"
+    },
+    {
+      "name": "ski-reference.collection-name.p-a-c-k-a-g-e-t-y-p-e-r-e-f",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.SkiReferenceNameConfig"
+    },
+    {
+      "name": "ski-reference.collection-name.p-r-o-f-i-l-e-t-y-p-e-r-e-f",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.SkiReferenceNameConfig"
+    },
+    {
+      "name": "ski-reference.collection-name.s-e-r-i-a-l-t-y-p-e-r-e-f",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.SkiReferenceNameConfig"
+    },
+    {
+      "name": "ski-reference.collection-name.s-h-i-p-m-e-n-t-s-t-a-t-u-s-r-e-f",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.SkiReferenceNameConfig"
+    },
+    {
+      "name": "ski-reference.collection-name.s-i-m-f-o-r-m-r-e-f",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.SkiReferenceNameConfig"
+    },
+    {
+      "name": "ski-reference.collection-name.s-i-m-t-y-p-e-r-e-f",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.SkiReferenceNameConfig"
+    },
+    {
+      "name": "ski-reference.collection-name.s-k-u-o-w-n-e-r-r-e-f",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.SkiReferenceNameConfig"
+    },
+    {
+      "name": "ski-reference.collection-name.s-k-u-t-y-p-e",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.SkiReferenceNameConfig"
+    },
+    {
+      "name": "ski-reference.collection-name.s-u-b-d-e-p-t-i-d",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.SkiReferenceNameConfig"
+    },
+    {
+      "name": "ski-reference.collection-name.s-u-p-p-l-i-e-r-c-o-d-e",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.SkiReferenceNameConfig"
+    },
+    {
+      "name": "ski-reference.collection-name.t-r-a-n-s-a-c-t-i-o-n-t-y-p-e-r-e-f",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.SkiReferenceNameConfig"
+    },
+    {
+      "name": "ski-reference.collection-name.u-n-i-t-o-f-m-e-a-s-r-e-f",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.SkiReferenceNameConfig"
+    },
+    {
+      "name": "ski-reference.collection-name.u-n-l-o-c-k-s-t-a-t-u-s-r-e-f",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.SkiReferenceNameConfig"
+    },
+    {
+      "name": "ski-reference.collection-name.u-r-l-t-y-p-e-r-e-f",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.SkiReferenceNameConfig"
+    },
+    {
+      "name": "ski.file.linux-location.output",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.S3Config$Linux_location"
+    },
+    {
+      "name": "ski.file.linux-location.process",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.S3Config$Linux_location"
+    },
+    {
+      "name": "ski.file.s3.archive-folder",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.S3Config$S3"
+    },
+    {
+      "name": "ski.file.s3.bucketname",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.S3Config$S3"
+    },
+    {
+      "name": "ski.file.s3.error-folder",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.S3Config$S3"
+    },
+    {
+      "name": "ski.file.s3.insert-folder",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.S3Config$S3"
+    },
+    {
+      "name": "ski.file.s3.region",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.S3Config$S3"
+    },
+    {
+      "name": "ski.file.win-location.output",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.S3Config$Win_location"
+    },
+    {
+      "name": "ski.file.win-location.process",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.S3Config$Win_location"
+    },
+    {
+      "name": "worksheet.tabname.accessory-compactible-sku",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.approve",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.brand-code-ref",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.channel-ref",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.color-hex-ref",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.color-ref",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.component-type-ref",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.config-type-ref",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.country-of-orgin-ref",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.delete",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.dept-id-ref",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.disposition-code-ref",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.equip-id-ref",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.equip-sub-cat-ref",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.equip-sub-type-ref",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.equip-type-ref",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.feature-type-ref",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.hazardous-material",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.image-url",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.kit-components",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.lang-code-ref",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.language-support",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.location-ref",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.manufacturer-config-ref",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.manufacturer-ref",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.model-compatibility",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.model-config",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.model-number",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.model-resource-doc",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.movesku",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.network-code-ref",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.os-type-ref",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.ownership-code-mapping",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.ownership-code-ref",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.package-type-ref",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.product-compatibility",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.product-config",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.product-definition",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.product-supplier",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.profile-type-ref",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.purge",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.sales-channel",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.serial-type-ref",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.shipment-status-ref",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.sim-compactible-sku",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.sim-form-ref",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.sim-type-ref",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.sku-brand",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.sku-network",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.sku-owner-ref",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.sku-part-owner",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.sku-sim-config",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.sku-type-ref",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.stage",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.sub-dept-id-ref",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.submit-approval",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.supplier-config-ref",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.supplier-ref",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.tac-range",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.transaction-type-ref",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.unit-of-meas-ref",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.unlock-status-ref",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    },
+    {
+      "name": "worksheet.tabname.url-type-ref",
+      "type": "java.lang.String",
+      "sourceType": "com.dish.scm.ski.skidataload.config.FileTabNameConfig"
+    }
+  ],
+  "hints": []
+}

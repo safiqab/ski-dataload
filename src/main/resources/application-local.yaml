@@ -1,0 +1,149 @@
+spring:
+  application:
+    name: ski-dataload
+ski:
+  file:
+    s3:
+      bucketname: dish-prod-wireless-sku-business-dropbox-inbound
+      insert_folder: skud/input/
+      archive_folder: skud/archive/
+      error_folder: skud/error/
+      region: us-west-2
+    win_location:
+      process: C:/temp1/process/
+      output: C:/temp1/output/
+    linux_location:
+      process: /tempskud/process/
+      output: /tempskud/output/
+
+
+restapi:
+  endpoint:
+    skireference:
+      get_reference_url: http://ski-api.wl-supplychain-dev.aws.dishcloud.io/v1/reference/collection-name/
+      post_reference_url: http://ski-api.wl-supplychain-dev.aws.dishcloud.io/v1/reference
+      patch_reference_url: http://ski-api.wl-supplychain-dev.aws.dishcloud.io/v1/reference
+    skimodel:
+      get_model_url: http://ski-api.wl-supplychain-dev.aws.dishcloud.io/v1/model/
+      post_model_url: http://ski-api.wl-supplychain-dev.aws.dishcloud.io/v1/model
+      patch_model_url: http://ski-api.wl-supplychain-dev.aws.dishcloud.io/v1/model
+    skisku:
+      get_sku_url: http://ski-api.wl-supplychain-dev.aws.dishcloud.io/v1/sku/
+      post_sku_url: http://ski-api.wl-supplychain-dev.aws.dishcloud.io/v1/sku
+      patch_sku_url: http://ski-api.wl-supplychain-dev.aws.dishcloud.io/v1/sku
+
+worksheet:
+  tabname:
+    feature_type_ref: FEATURE_TYPE_REF
+    config_type_ref: CONFIG_TYPE_REF
+    manufacturer_ref: MANUFACTURER_REF
+    supplier_ref: SUPPLIER_REF
+    equip_id_ref: EQUIP_ID_REF
+    sim_type_ref: SIM_TYPE_REF
+    sim_form_ref: SIM_FORM_REF
+    package_type_ref: PACKAGE_TYPE_REF
+    sku_type_ref: SKU_TYPE_REF
+    unit_of_meas_ref: UNIT_OF_MEAS_REF
+    color_ref: COLOR_REF
+    color_hex_ref: COLOR_HEX_REF
+    dept_id_ref: DEPT_ID_REF
+    sub_dept_id_ref: SUB_DEPT_ID_REF
+    os_type_ref: OS_TYPE_REF
+    serial_type_ref: SERIAL_TYPE_REF
+    equip_type_ref: EQUIP_TYPE_REF
+    equip_sub_type_ref: EQUIP_SUB_TYPE_REF
+    equip_sub_cat_ref: EQUIP_SUB_CAT_REF
+    lang_code_ref: LANG_CODE_REF
+    brand_code_ref: BRAND_CODE_REF
+    location_ref: location_ref
+    channel_ref: CHANNEL_REF
+    url_type_ref: URL_TYPE_REF
+    country_of_orgin_ref: COUNTRY_OF_ORIGIN_REF
+    ownership_code_ref: OWNERSHIP_CODE_REF
+    component_type_ref: COMPONENT_TYPE_REF
+    profile_type_ref: PROFILE_TYPE_REF
+    transaction_type_ref: TRANSACTION_TYPE_REF
+    disposition_code_ref: DISPOSITION_CODE_REF
+    shipment_status_ref: SHIPMENT_STATUS_REF
+    unlock_status_ref: UNLOCK_STATUS_REF
+    supplier_config_ref: SUPPLIER_CONFIG_REF
+    manufacturer_config_ref: MANUFACTURER_CONFIG_REF
+    sku_owner_ref: SKU_OWNER_REF
+    network_code_ref: NETWORK_CODE_REF
+    model_number: MODEL_NUMBER
+    product_definition: PRODUCT_DEFINITION
+    product_supplier: PRODUCT_SUPPLIER
+    product_config: PRODUCT_CONFIG
+    model_config: MODEL_CONFIG
+    hazardous_material: HAZARDOUS_MATERIAL
+    sku_part_owner: SKU_PART_OWNER
+    image_url: IMAGE_URL
+    language_support: LANGUAGE_SUPPORT
+    sales_channel: SALES_CHANNEL
+    tac_range: TAC_RANGE
+    submit_approval: SUBMIT
+    approve: APPROVE
+    delete: DELETE
+    purge: PURGE
+    stage: STAGE
+    movesku: MOVESKU
+
+ski-reference:
+  collection-name:
+    BRAND_CODE_REF: BRAND_CODE_REF
+    CHANNEL_REF: CHANNEL_REF
+    COLOR_HEX_REF: COLOR_HEX_REF
+    COLOR_REF: COLOR_REF
+    COMPONENT_TYPE_REF: COMPONENT_TYPE_REF
+    CONFIG_TYPE_REF: CONFIG_TYPE_REF
+    COUNTRY_OF_ORIGIN_REF: COUNTRY_OF_ORIGIN_REF
+    DEPT_ID_REF: DEPT_ID_REF
+    DISPOSITION_CODE_REF: DISPOSITION_CODE_REF
+    EQUIP_ID_REF: EQUIP_ID_REF
+    EQUIP_SUB_CAT_REF: EQUIP_SUB_CAT_REF
+    EQUIP_SUB_TYPE_REF: EQUIP_SUB_TYPE_REF
+    EQUIP_TYPE_REF: EQUIP_TYPE_REF
+    FEATURE_TYPE_REF: FEATURE_TYPE_REF
+    LANG_CODE_REF: LANG_CODE_REF
+    LOCATION_REF: LOCATION_REF
+    MANUFACTURER_REF: MANUFACTURER_REF
+    NETWORK_CODE: NETWORK_CODE
+    OS_TYPE: OS_TYPE
+    OWNERSHIP_CODE_REF: OWNERSHIP_CODE_REF
+    PACKAGE_TYPE_REF: PACKAGE_TYPE_REF
+    PROFILE_TYPE_REF: PROFILE_TYPE_REF
+    SERIAL_TYPE_REF: SERIAL_TYPE_REF
+    SHIPMENT_STATUS_REF: SHIPMENT_STATUS_REF
+    SIM_FORM_REF: SIM_FORM_REF
+    SIM_TYPE_REF: SIM_TYPE_REF
+    SKU_OWNER_REF: SKU_OWNER_REF
+    SKU_TYPE: SKU_TYPE
+    SUB_DEPT_ID: SUB_DEPT_ID
+    SUPPLIER_CODE: SUPPLIER_CODE
+    TRANSACTION_TYPE_REF: TRANSACTION_TYPE_REF
+    UNIT_OF_MEAS_REF: UNIT_OF_MEAS_REF
+    UNLOCK_STATUS_REF: UNLOCK_STATUS_REF
+    URL_TYPE_REF: URL_TYPE_REF
+
+
+email:
+  server:
+    host: smtp.global.dish.com
+    port: 25
+    timeout: 6000
+  from: ski-dataload-prod@dish.com
+  to: shafeeq.bari@dish.com
+  cc:
+
+cloud:
+  aws:
+    stack:
+      auto: false
+
+logging:
+  level:
+    com:
+      dish:
+        scm:
+          ski:
+            skidataload: DEBUG
